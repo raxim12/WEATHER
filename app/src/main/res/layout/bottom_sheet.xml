@@ -1,0 +1,155 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2A243D"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <View
+            android:id="@+id/dragHandle"
+            android:layout_width="64dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="Tashkent"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:text="19°"
+            android:textColor="@color/white"
+            android:textSize="96sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="19° | Mostly Clear"
+            android:textColor="#8DAFBE"
+            android:textSize="24sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#43286F"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="Hourly Forecast"
+                android:textColor="#98B7D4"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_medium"
+                android:text="Weekly Forecast"
+                android:textColor="#98B7D4"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#A9A7AB6B"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView2"
+                android:layout_width="match_parent"
+                android:layout_height="156dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:listitem="@layout/item_card_weather" />
+
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/widgets1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerView2" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="164dp"
+                android:layout_height="164dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/widgets2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img1" />
+
+            <ImageView
+                android:layout_width="164dp"
+                android:layout_height="164dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/widgets23"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img1"
+                app:layout_goneMarginEnd="14dp" />
+
+            <ImageView
+                android:layout_width="164dp"
+                android:layout_height="164dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/widgets4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView6"
+                app:layout_goneMarginEnd="14dp" />
+
+            <ImageView
+                android:layout_width="164dp"
+                android:layout_height="164dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/widgets5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView6"
+                app:layout_goneMarginEnd="14dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</ScrollView>
